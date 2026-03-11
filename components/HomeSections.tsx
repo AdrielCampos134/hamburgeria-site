@@ -115,7 +115,7 @@ export default function HomeSections() {
 
   return (
     <>
-      <section id="inicio" className="relative min-h-[100svh] overflow-hidden md:min-h-screen">
+      <section id="inicio" className="mobile-vh-fix relative overflow-hidden md:min-h-screen">
         <Image
           src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920&q=80"
           alt="Hamburguer artesanal Brasa Burger"
@@ -127,7 +127,7 @@ export default function HomeSections() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.55),rgba(0,0,0,0.9))]" />
 
         <div
-          className={`relative mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-4 pb-16 pt-28 text-white transition-all duration-700 sm:px-6 sm:pb-24 sm:pt-32 lg:min-h-screen lg:px-8 ${
+          className={`mobile-vh-fix relative mx-auto flex w-full max-w-7xl flex-col justify-center px-4 pb-16 pt-28 text-white transition-all duration-700 sm:px-6 sm:pb-24 sm:pt-32 lg:min-h-screen lg:px-8 ${
             heroReady ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -248,9 +248,7 @@ export default function HomeSections() {
         </section>
       </RevealOnScroll>
 
-      <RevealOnScroll>
-        <MenuSection />
-      </RevealOnScroll>
+      <MenuSection />
 
       <RevealOnScroll>
         <section className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">

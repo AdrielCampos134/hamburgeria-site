@@ -60,3 +60,14 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.mobile-vh-fix {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .mobile-vh-fix {
+    min-height: -webkit-fill-available;
+  }
+}

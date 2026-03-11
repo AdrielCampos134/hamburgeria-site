@@ -3,12 +3,12 @@ import { Facebook, Instagram, MapPin, MessageCircle, Phone } from "lucide-react"
 import { whatsappNumber } from "@/lib/menu-data";
 
 const quickLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#cardapio", label: "Cardapio" },
-  { href: "#destaques", label: "Destaques" },
-  { href: "#galeria", label: "Galeria" },
-  { href: "#localizacao", label: "Localizacao" },
-  { href: "#contato", label: "Contato" },
+  { href: "/", label: "Inicio" },
+  { href: "/cardapio", label: "Cardapio" },
+  { href: "/destaques", label: "Destaques" },
+  { href: "/galeria", label: "Galeria" },
+  { href: "/localizacao", label: "Localizacao" },
+  { href: "/contato", label: "Contato" },
 ];
 
 export default function Footer() {

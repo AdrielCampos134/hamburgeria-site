@@ -1,22 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { whatsappNumber } from "@/lib/menu-data";
 
 const navLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#cardapio", label: "Cardapio" },
-  { href: "#destaques", label: "Destaques" },
-  { href: "#galeria", label: "Galeria" },
-  { href: "#localizacao", label: "Localizacao" },
-  { href: "#contato", label: "Contato" },
+  { href: "/", label: "Inicio" },
+  { href: "/cardapio", label: "Cardapio" },
+  { href: "/destaques", label: "Destaques" },
+  { href: "/galeria", label: "Galeria" },
+  { href: "/localizacao", label: "Localizacao" },
+  { href: "/contato", label: "Contato" },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -68,9 +70,16 @@ export default function Header() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="text-sm text-zinc-300 transition hover:text-white">
+            <Link
+              key={link.href}
+              href={link.href}
+              aria-current={pathname === link.href ? "page" : undefined}
+              className={`header-link relative pb-1 text-sm transition ${
+                pathname === link.href ? "active text-white" : "text-zinc-300 hover:text-white"
+              }`}
+            >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -112,14 +121,16 @@ export default function Header() {
         >
           <div className="flex flex-col gap-5 text-xl font-oswald tracking-wider">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                className="border-b border-white/10 pb-3 text-white"
+                className={`border-b border-white/10 pb-3 ${
+                  pathname === link.href ? "text-[var(--primary)]" : "text-white"
+                }`}
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 

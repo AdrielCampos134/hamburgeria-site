@@ -115,7 +115,7 @@ export default function HomeSections() {
 
   return (
     <>
-      <section id="inicio" className="mobile-vh-fix relative overflow-hidden md:min-h-screen">
+      <section className="mobile-vh-fix relative overflow-hidden md:min-h-screen">
         <Image
           src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920&q=80"
           alt="Hamburguer artesanal Brasa Burger"
@@ -171,14 +171,14 @@ export default function HomeSections() {
             </div>
           </div>
 
-          <a href="#destaques" className="mt-10 inline-flex w-max animate-bounce self-center text-zinc-300">
+          <Link href="/destaques" className="mt-10 inline-flex w-max animate-bounce self-center text-zinc-300">
             <ChevronDown />
-          </a>
+          </Link>
         </div>
       </section>
 
       <RevealOnScroll>
-        <section id="destaques" className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <section className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
           <h2 className="font-oswald text-4xl text-white sm:text-5xl">Mais pedidos da semana</h2>
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {highlights.map((item) => (
@@ -284,7 +284,7 @@ export default function HomeSections() {
       </RevealOnScroll>
 
       <RevealOnScroll>
-        <section id="galeria" className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <section className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
           <h2 className="font-oswald text-4xl text-white sm:text-5xl">Galeria</h2>
           <div className="mt-10 columns-1 gap-4 sm:columns-2 lg:columns-3">
             {galleryItems.map((item) => (
@@ -307,7 +307,7 @@ export default function HomeSections() {
       </RevealOnScroll>
 
       <RevealOnScroll>
-        <section id="localizacao" className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <section className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
           <h2 className="font-oswald text-4xl text-white sm:text-5xl">Localizacao e horarios</h2>
           <div className="relative mt-10 overflow-hidden rounded-3xl border border-white/10">
             <iframe
@@ -354,7 +354,7 @@ export default function HomeSections() {
       </RevealOnScroll>
 
       <RevealOnScroll>
-        <section id="contato" className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <section className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
           <h2 className="font-oswald text-4xl text-white sm:text-5xl">Contato</h2>
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <div className="space-y-4">

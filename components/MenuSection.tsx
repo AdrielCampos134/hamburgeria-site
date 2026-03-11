@@ -21,7 +21,7 @@ export default function MenuSection({ compact = false }: MenuSectionProps) {
   }, [activeFilter]);
 
   return (
-    <section id="cardapio" className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+    <section className="mx-auto w-full max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
       {!compact && (
         <div className="mb-10 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <div>
